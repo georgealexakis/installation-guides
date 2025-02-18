@@ -57,7 +57,7 @@ Install Visual Studio
 Make sure Desktop development with C++ is checked
 Windows 11 SDK check
 
-
+```
 conda create --name detectron_env python=3.12
 
 conda activate detectron_env
@@ -77,7 +77,9 @@ python setup.py build develop
 pip install -e .
 
 python -c "import detectron2; print(detectron2.__version__)"
+```
 
-
+```
 conda clean --all
 conda remove -n ENV_NAME --all
+```
