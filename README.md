@@ -17,6 +17,7 @@ No environment
 [Service]
  User=george
  WorkingDirectory=/home/george
+ ExecStartPre=/bin/sleep 10
  ExecStart=/usr/bin/python3 /home/george/test.py
  Restart=on-failure
 
@@ -36,6 +37,7 @@ After=network.target
 [Service]
 User=george
 WorkingDirectory=/home/george
+ExecStartPre=/bin/sleep 10
 ExecStart=/bin/bash -c "source /home/george/venv/bin/activate && python /home/george/test.py"
 Restart=on-failure
 
