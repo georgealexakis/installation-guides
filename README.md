@@ -2,7 +2,6 @@
 
 Many installation guides for miscellaneous stuff.
 
-
 # Startup service for Ubuntu
 
 1. ` cd /etc/systemd/system `
@@ -55,8 +54,8 @@ WantedBy=multi-user.target
 
 https://helloshreyas.com/how-to-install-detectron2-on-windows-machine
 
-Install Visual Studio
-Make sure Desktop development with C++ is checked
+* Install Visual Studio
+* Make sure Desktop development with C++ is checked
 Windows 11 SDK check
 
 ```
@@ -84,4 +83,25 @@ python -c "import detectron2; print(detectron2.__version__)"
 ```
 conda clean --all
 conda remove -n ENV_NAME --all
+```
+
+# Python Socketio Requirements
+
+* pip install socketio
+* pip install python-socketio
+* pip install python-socketio[client]
+* pip install python-socketio[asyncio_client]
+
+# Ubuntu Time server
+
+```
+sudo nano /etc/systemd/timesyncd.conf
+systemctl restart systemd-timesyncd.service
+```
+
+# Network Configuration
+
+```
+sudo gedit /etc/netplan/01-network-manager-all.yaml
+sudo netplan apply
 ```
